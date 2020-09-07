@@ -35,3 +35,9 @@
 ## To execute:
 - change pwd variable inside flaskblog/drug_target_interaction/routes.py to your current directory
 - python run.py
+
+
+<br>
+<br>
+<br>
+- Web Interface template taken from https://github.com/CoreyMSchafer/code_snippets/tree/master/Python/Flask_Blog
