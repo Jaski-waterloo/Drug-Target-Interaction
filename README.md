@@ -3,9 +3,9 @@
 - This can cost 1-2 Billion Dollars per disease and upto 1-2 years
 - I trained my model on 50,000 such interactions
   - Positive Interactions
-  - When A drug binds to a protein
- - Negative Interaction
-  - When a drug does not bind to a protein
+    - When A drug binds to a protein
+  - Negative Interaction
+    - When a drug does not bind to a protein
 - Given a Protein and a Ligand, My model predicts if a drug is a binder to a Protein or not.
 - Hence saving a lot of time and money
 
