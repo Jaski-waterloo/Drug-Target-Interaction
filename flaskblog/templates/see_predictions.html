@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+    <h1>Predictions</h1>
+</div>
+    <div class="container">
+    	<table class="table table-bordered table-hover">
+		<thead class="thead-dark">
+    		<tr>
+    			<th>Model</th>
+    			<th>Binder</th>
+    		</tr>
+		</thead>
+    		{% if data[0] == 0 %}
+    			<tr class="table-danger">
+    				<td>XGBoost</td>
+    				<td>No</td>
+    			</tr>
+    		{% else %}
+    			<tr class="table-success">
+    				<td>XGBoost</td>
+    				<td>Yes</td>
+    			</tr>
+    		{% endif %}
+    		{% if data[1] == 0 %}
+    			<tr class="table-danger">
+    				<td>SVM</td>
+    				<td>No</td>
+    			</tr>
+    		{% else %}
+    			<tr class="table-success">
+    				<td>SVM</td>
+    				<td>Yes</td>
+    			</tr>
+    		{% endif %}
+    		{% if data[2] == 0 %}
+    			<tr class="table-danger">
+    				<td>Random Forest</td>
+    				<td>No</td>
+    			</tr>
+    		{% else %}
+    			<tr class="table-success">
+    				<td>Random Forest</td>
+    				<td>Yes</td>
+    			</tr>
+    		{% endif %}
+    	</table>
+    </div>
+{% endblock content %}
+

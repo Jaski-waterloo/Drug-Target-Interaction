@@ -1,0 +1,7 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Please Click on the link below to download you file</h1>
+    <div class="container">
+        <p><a href={{url_for('drug_target_interaction.download_file')}}>Download</a></p>
+    </div>
+{% endblock content %}

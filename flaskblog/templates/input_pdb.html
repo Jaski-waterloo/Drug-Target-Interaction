@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section">
+      <div class="media">
+        <div class="media-body">
+          <h2 class="account-heading">{{ current_user.username }}</h2>
+          <p class="text-secondary">{{ current_user.email }}</p>
+        </div>
+      </div>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Single Ligand Prediction</legend>
+                <div class="form-group">
+                    {{ form.pdb.label() }}
+                    {{ form.pdb(class="form-control-file") }}
+                    {% if form.pdb.errors %}
+                        {% for error in form.pdb.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+		<div class="form-group">
+                    {{ form.pdb_name.label() }}
+                    {{ form.pdb_name(class="form-control-file") }}
+                    {% if form.pdb_name.errors %}
+                        {% for error in form.pdb_name.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+		<div class="form-group">
+                    {{ form.fasta.label() }}
+                    {{ form.fasta(class="form-control-file") }}
+                    {% if form.fasta.errors %}
+                        {% for error in form.fasta.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+		<div class="form-group">
+                    {{ form.ligand.label() }}
+                    {{ form.ligand(class="form-control-file") }}
+                    {% if form.ligand.errors %}
+                        {% for error in form.ligand.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+		<div class="form-group">
+                    {{ form.ligand_name.label() }}
+                    {{ form.ligand_name(class="form-control-file") }}
+                    {% if form.ligand_name.errors %}
+                        {% for error in form.ligand_name.errors %}
+                            <span class="text-danger">{{ error }}</span></br>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}
+
